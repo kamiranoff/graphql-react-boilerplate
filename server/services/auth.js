@@ -81,4 +81,11 @@ function login({ email, password, req }) {
   });
 }
 
-module.exports = { signup, login };
+function logout(req) {
+  // saving the user just so we can retun it to graphql
+  const { user } = req;
+  req.logout();
+  return user;
+}
+
+module.exports = { signup, login, logout };
