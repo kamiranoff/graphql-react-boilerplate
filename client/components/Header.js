@@ -56,7 +56,6 @@ class Header extends Component {
   }
 
   render() {
-    console.log(this.props.data);
     return (
       <header>
         <nav className="nav-wrapper">
